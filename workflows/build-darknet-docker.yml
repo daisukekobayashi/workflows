@@ -12,8 +12,11 @@ jobs:
         with:
           url: https://api.github.com/repos/daisukekobayashi/darknet-docker/actions/workflows/14497715/dispatches
           method: POST
-          headers: '{ "Accept": "application/vnd.github.v3+json" }'
-          bearer-token: ${{ secrets.GITHUB_TOKEN }}
+          headers: |
+            {
+              "Accept": "application/vnd.github.v3+json",
+              "Authorization": "token ${{ secrets.GITHUB_TOKEN }}"
+            }
           body: |
             {
               "ref":"master"
