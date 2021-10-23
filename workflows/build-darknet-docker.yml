@@ -10,7 +10,7 @@ jobs:
       - name: Make a HTTP Request
         uses: actionsflow/axios@v1
         with:
-          url: https://api.github.com/repos/daisukekobayashi/darknet-docker/actions/workflows14497715/dispatches
+          url: https://api.github.com/repos/daisukekobayashi/darknet-docker/actions/workflows/14497715/dispatches
           method: POST
           headers: '{ "Accept": "application/vnd.github.v3+json" }'
           bearer-token: ${{ secrets.GITHUB_TOKEN }}
