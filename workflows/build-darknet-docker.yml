@@ -1,0 +1,20 @@
+name: build-darknet-docker
+on:
+  rss:
+    url: https://github.com/AlexeyAB/darknet/commits/master.atom
+jobs:
+  request:
+    name: Make a HTTP Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make a HTTP Request
+        uses: actionsflow/axios@v1
+        with:
+          url: https://api.github.com/repos/daisukekobayashi/darknet-docker/actions/workflows14497715/dispatches
+          method: POST
+          headers: '{ "Accept": "application/vnd.github.v3+json" }'
+          bearer-token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            {
+              "ref":"master"
+            }
