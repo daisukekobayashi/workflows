@@ -15,7 +15,7 @@ jobs:
           headers: |
             {
               "Accept": "application/vnd.github.v3+json",
-              "Authorization": "token ${{ secrets.GITHUB_TOKEN }}"
+              "Authorization": "token ${{ secrets._GITHUB_TOKEN }}"
             }
           body: |
             {
